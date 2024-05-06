@@ -1,0 +1,128 @@
+
+.value {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.value-p {
+    margin: 2em;
+    line-height: 2em;
+    text-align: center;
+    padding-right: 20em;
+    padding-left: 20em;
+    
+    
+}
+
+
+.value-h2>span {
+    color: #BD1414;
+}
+
+.value-h2 {
+    font-size: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    line-height: 1em;
+}
+
+.value-ul {
+    display: flex;
+    margin-bottom: 3em;
+    list-style: none;
+}
+.value-li {
+    text-align: center;
+    margin: 0 4em;
+    
+}
+
+.value-img {
+    border-radius: 1em;
+    box-shadow: 0 3px 7px #00000029 ;
+}
+
+.value-h3 {
+    line-height: 2em;
+    margin: 0.5em 0;
+}
+
+.value-ul-p {
+    width: 15em;
+    text-align: center;
+    font-size: smaller;
+}
+
+.value-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 7em;
+    margin-right: 7em;
+}
+
+.value-2-h1 {
+    margin-bottom: 1.5em;
+}
+
+.value-2-p {
+    padding: 0 2em;
+    margin-bottom: 3em;
+}
+
+
+@media (max-width:750px) {
+    .value-ul {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3em;
+    }
+}
+
+@media (min-width: 1600px) {
+
+
+}
+@media (min-width: 1850px) {
+
+}
+ @media (max-width: 1400px) {
+
+}
+@media (max-width: 1300px) {
+
+}
+@media (max-width: 1100px) {
+
+}
+@media (max-width: 970px) {
+    .value-2{
+        margin-left: 3em;
+    margin-right: 3em;
+    }
+    .value-ul{
+        gap: 3em;
+    }
+    .value-li {
+        margin: 0 0.8em;   
+    }
+  
+
+
+}
+@media (max-width: 767px) {
+    .value-li {
+        margin: 0 0.5em;   
+    }
+  
+
+}
+@media (max-width: 480px) {
+  
+}

@@ -1,0 +1,47 @@
+.guidlines {
+    margin: 4em 7em;
+}
+
+.guidlines-h1 {
+    font-size: 3em;
+    color: #AD2B21;  
+    position: relative;
+}
+
+.guidlines-h1-btn {
+    position: absolute;
+    right: 2em;
+    padding: 0.5em 2em;
+    background-color: #BD1414;
+    color: white;
+    border: none;
+    border-radius: 0.7em;
+}
+
+.guidlines-h3 {
+    font-weight: bolder;
+    font-size: 2em;
+}
+
+.guidlines-p {
+    color: #AD2B21;
+    font-weight: normal;
+    margin: 2em 0;
+}
+
+.guidlines-p-span {
+    margin: 0.5em;
+}
+
+.guidelines-h2 {
+    margin-top: 3em;
+    margin-bottom: 1.5em;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.guidlines-ul {
+    line-height: 2em;
+    font-weight: lighter;
+}
+

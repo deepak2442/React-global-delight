@@ -1,0 +1,133 @@
+
+.role-1{
+    margin-left: 7em;
+    margin-right: 7em;
+}
+
+.role {
+    display: flex;  
+    text-align: center;
+    margin: 4em 3em;
+    flex-wrap: wrap;    
+}
+
+.job-btn {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    border-radius: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+    
+    
+}
+
+.job-btn:hover{
+    background-color: #BD1414;
+    color: #fff;
+}
+
+.employe-div-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 1em;
+    
+}
+
+.cv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3em; 
+    text-align: center;   
+    margin-bottom: 5em;
+}
+
+.cv-h4{
+    margin-bottom: 2em;
+}
+
+p {
+    line-height: 1.8em;
+}
+
+.cv-link {
+    color: #BD1414;
+}
+
+@media (min-width: 1600px) {
+
+
+}
+@media (min-width: 1850px) {
+
+}
+ @media (max-width: 1400px) {
+    .role-1{
+        margin-left: 6em;
+        margin-right: 6em;
+    }
+
+}
+@media (max-width: 1300px) {
+    .role-1{
+        margin-left: 3em;
+        margin-right: 3em;
+    }
+    .job-btn {
+        margin-bottom: 1em;
+    }
+
+}
+@media (max-width: 1100px) {
+
+}
+@media (max-width: 970px) {
+    .role{
+        justify-content:center;
+        margin: 0 1em;
+    }
+    .job-btn{
+        margin-left: 0.2em;
+        margin-right: 0.2em;
+        margin-bottom: 1em;
+    }
+  
+    
+
+
+}
+@media (max-width: 767px) {
+
+    .role-1{
+        
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .employe-div-grid {
+        display: flex;
+        flex-direction: column;
+        align-items:stretch ;
+        justify-content: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .role {
+        justify-content:center;
+        margin-left: 1em;
+        
+    }
+   
+  
+
+}
+@media (max-width: 480px) {
+  
+}

@@ -1,0 +1,17 @@
+.product-list-ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    border:none;
+    cursor: pointer;
+}
+
+.product-li{
+    padding: 14px;
+    transition: all linear 0.2s;
+}
+
+.product-li:hover {
+    font-weight: bolder;
+}
