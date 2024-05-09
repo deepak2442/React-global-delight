@@ -1,96 +1,99 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import Popup from "../popup/popup";
 import "./jobGuidline.css";
+import { useParams } from "react-router";
 
-const JobGuidlines = () => {
+const JobGuidlines =  () => {
     const [popup,setPopup] = useState(false);
+    const [data,setData] = useState([]);
+    const {id} = useParams();
+
+    useEffect(() => {
+      // Scroll to the top of the page when the component mounts
+      window.scrollTo(0, 0);
+    }, []);
+    useEffect(() => {
+      
+    axios.get(`http://localhost:5000/getbyId/${id}`)
+      .then(response => {
+        // const { profileInformation } = response.data.newResults;
+        setData(response.data.data);
+        console.log(response.data.data,"this is row data");
+  
+    })
+    .catch(error => {
+        console.error('Error fetching data:', error);
+    });
+    }, [])
+
+  //  console.log(data.profileInformation,"ss")
+    // console.log(id)
+
+   
+
+      // const filterdata = data.filter((id) => (id == data.id));
+      // console.log(filterdata,"ftghnjmkmmjhygtftgbhnj")
+      // const {profileInformation}=data[-1];
+      // console.log(profileInformation);
 
   return (
     <div className="guidlines">
       <h1 className="guidlines-h1">
-        Spark, Scala Developer{" "}
+     {data.length && data[0].position}
         <span>
-          <button onClick={() => setPopup(true)} className="guidlines-h1-btn">Apply now</button>
+          <button onClick={() => setPopup(true)} className="guidlines-h1-btn" style={{cursor:"pointer"}}>Apply now</button>
         </span>
-        <Popup POPUP ={popup} onClose= {() => setPopup(false)} />
+        <Popup id={id} POPUP ={popup} position={data.length && data[0].position} department={data.length && data[0].department} onClose= {() => setPopup(false)}  />
+        
+       
       </h1>
-      <h3 className="guidlines-h3">Product Engineering</h3>
+     <h1> {data.length && data[0].department}</h1>
       <p className="guidlines-p">
-        Experience - 4 Years <span className="guidlines-p-span">.</span> Udupi{" "}
-        <span className="guidlines-p-span">.</span>Unmarried
+        Experience - {data.length && data[0].experience} year <span className="guidlines-p-span">.</span> {data.length && data[0].location}
+        <span className="guidlines-p-span">.</span>{data.length && data[0].jobType}
+        
+
       </p>
       <hr />
+    
+   
 
-      <h2 className="guidelines-h2">Technical/Functional Skills</h2>
-      <ul className="guidlines-ul">
-        <li>Must have 4+ years of IT experience</li>
-        <li>Must have good experience in Spark and Scala</li>
-        <li>
-          Good to have experience instreaming systems like Spark streaming and
-          Storm
+    
+        {/* <li>{(data.length && data.profileInformation.content)}</li> */}
+      
+        {/* <li>
+        {profileInformation && (
+    profileInformation.map((item, index) => (
+        <li key={index}>
+            <h3>{item.heading}</h3>
+            <ul>
+                {item.content.map((content, contentIndex) => (
+                    <li key={contentIndex}>{content}</li>
+                ))}
+            </ul>
+        
         </li>
-        <li>
-          Experience with Spark Data processing, Performance Tuning, Memory
-          Management, Fault Tolerance, Scalability
-        </li>
-        <li>
-          Good knowledge of Hive, Sqoop, Spark, Data warehousing and information
-          management best practice
-        </li>
-        <li>
-          Expertise in big data infrastructure, distributed systems, data
-          modelling, query processing and relationa
-        </li>
-        <li>
-          Experience with Scala - Object Orient Programming concepts (Singleton
-          and Companion Object, Class, Case Class, File Handling and
-          Multi-threading), Collections (Array, String, Tuple, Set, List, Map),
-          Pattern Matching
-        </li>
-      </ul>
+    ))
+)}
 
-      <h2 className="guidelines-h2">Good to Have</h2>
-      <ul className="guidlines-ul">
-        <li>
-          Excellent interpersonal, organizational, written communication, oral
-          communication and listening skills
-        </li>
-        <li>Bachelor of Engineering in CS/IT/ECE stream is preferred</li>
-        <li>Flexible stretching on need basis and travel to client place</li>
-        <li>
-          Should come up with the work estimation and should provide inputs to
-          managers on resource and risk planning
-        </li>
-        <li>
-          Ability to coordinate with SMEs, stakeholders, manage timelines,
-          escalation & provide on time status
-        </li>
-        <li>
-          Understanding of No-SQL databases (Cassandra) is desired to have, not
-          mandatory
-        </li>
-      </ul>
+            </li> */}
 
-      <h2 className="guidelines-h2">Roles & responsibilities</h2>
-      <ul className="guidlines-ul">
-        <li>Developing new user-facing features using Angular</li>
-        <li>
-          Developing responsive websites mobile applic ations using Javascript
-          based frameworks and platforms
-        </li>
-        <li>
-          Building reusable components and front-end libraries for future use
-        </li>
-        <li>Translating designs and wireframes into high quality code</li>
-        <li>
-          Optimizing components for maximum performance across a vast array of
-          web-capable devices and browsers
-        </li>
-        <li>
-          Work closely with back-end developers and customers to ensure an
-          effective, visually appealing, functional and intuitive implementation
-        </li>
-      </ul>
+{data.length && Array.isArray(data[0].profileInformation) && data[0].profileInformation.map((item, index) => (
+    <div key={index}>
+        <h2 className="guidelines-h2">{item.heading}</h2>
+        
+        <ul className="guidlines-ul">
+            {item.content.map((content,index) => (
+                <li key={index}>{content}</li>
+            ))}
+        </ul>
+    </div>
+))}
+      
+    
+
+     
     </div>
   );
 };
