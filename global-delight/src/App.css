@@ -2,3 +2,13 @@ body {
     background: #F6F6F6;
     font-family: sf-ui-regular, 'helvetica';
 }
+.app {
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .app > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }

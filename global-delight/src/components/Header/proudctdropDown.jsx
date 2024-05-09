@@ -17,6 +17,8 @@ const ProudctdropDown = () => {
                 <li  className="product-li">Camera Plus Pro</li>
                 <li  className="product-li">Boom Remote</li>
                 <li  className="product-li">AuDimix Windows</li>
+                <li  className="product-li">AuDimix Windows</li>
+                <li  className="product-li">AuDimix Windows</li>
         </ul>
     </div>
   )
