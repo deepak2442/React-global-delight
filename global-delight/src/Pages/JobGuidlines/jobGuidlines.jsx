@@ -40,7 +40,7 @@ const JobGuidlines =  () => {
   return (
     <div className="guidlines">
       <h1 className="guidlines-h1">
-     {data.length && data[0].position}
+     {data.length && data[0].position.charAt(0).toUpperCase()+data[0].position.slice(1)}
         <span>
           <button onClick={() => setPopup(true)} className="guidlines-h1-btn" style={{cursor:"pointer"}}>Apply now</button>
         </span>
@@ -48,10 +48,10 @@ const JobGuidlines =  () => {
         
        
       </h1>
-     <h1> {data.length && data[0].department}</h1>
+     <h1> {data.length && data[0].department.charAt(0).toUpperCase()+data[0].department.slice(1,)}</h1>
       <p className="guidlines-p">
-        Experience - {data.length && data[0].experience} year <span className="guidlines-p-span">.</span> {data.length && data[0].location}
-        <span className="guidlines-p-span">.</span>{data.length && data[0].jobType}
+        Experience - {data.length && data[0].experience} year&apos;s<span className="guidlines-p-span">&gt;</span> {data.length && data[0].location}
+        <span className="guidlines-p-span">&gt;</span>{data.length && data[0].jobType}
         
 
       </p>

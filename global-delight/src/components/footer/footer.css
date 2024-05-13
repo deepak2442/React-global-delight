@@ -60,6 +60,7 @@
 .social-media-logo {
     width: 2em;
     filter: invert(1);
+    z-index: 0;
 }
 
 

@@ -78,7 +78,7 @@ function Popup({ POPUP, onClose,position,department,id }) {
       <div className="popup-body">
         <div className="popup-header">
           <p className="popup-p">Applying for</p>
-          <h2 className="popup-h2">{position}</h2>
+          <h2 className="popup-h2">{position.charAt(0).toUpperCase()+position.slice(1)}</h2>
           <p className="popup-p-p">{department}</p>
           <button
             className="popup-btn-x"
@@ -99,6 +99,7 @@ function Popup({ POPUP, onClose,position,department,id }) {
                 onChange={handleChange}
                 type="text"
                 placeholder="Your Name"
+                required
               />
               <input
                 className="popup-name-in"
@@ -107,6 +108,7 @@ function Popup({ POPUP, onClose,position,department,id }) {
                 onChange={handleChange}
                 type="text"
                 placeholder="your Email address"
+                required
               />
             </div>
 
@@ -118,6 +120,7 @@ function Popup({ POPUP, onClose,position,department,id }) {
                 className="popup-name-in"
                 type="text"
                 placeholder="Your phone number"
+                required
               />
               <input
                 className="popup-name-in"
@@ -131,7 +134,9 @@ function Popup({ POPUP, onClose,position,department,id }) {
               name="message"
               value={postData.message}
               onChange={handleChange}
-              placeholder="Message"
+              placeholder="Your Message"
+              required 
+
             />
             <input
               className="popup-message-pdf"
@@ -143,6 +148,7 @@ function Popup({ POPUP, onClose,position,department,id }) {
                 handleChange(e);
               }}
               placeholder="Attach your resume(PDF Only)*"
+              required
             />
             <p className="files-p">
               File size of your documents should not exceed 5MB

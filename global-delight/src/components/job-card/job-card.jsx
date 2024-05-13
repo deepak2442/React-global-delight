@@ -20,6 +20,9 @@ const Job = () => {
       console.log(department);
       const filteredroles = data.filter((job) => job.department.toLowerCase() === department.toLowerCase());
       console.log(filteredroles);
+      if(filteredroles.length === 0){
+        alert(" currently no jobs related to "+department);
+      }
       return setFilteredJobs(filteredroles);
     }
 

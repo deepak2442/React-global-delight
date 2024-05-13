@@ -47,3 +47,43 @@
     margin-left: 25px;
 }
 
+
+/* @media  (min-width: 418px)and (max-width:600px) {
+    .guidlines-h1-btn {
+        position: relative; 
+       
+         display: flex;
+        margin-top:6.5em;
+    
+        background-color: #ca0d0d;
+        color: white;
+        border: none;
+         height: 35px;
+       width: 120px;
+       width: 100px;
+        border-radius: 0.7em;
+        left: 0 ;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    .guidlines-h1{
+         margin-bottom: 10px;
+        margin-bottom:0;
+        font-size: 2em;
+        
+    }
+    .guidlines-p {
+        color: #AD2B21;
+        font-weight: normal;
+        margin-top:0px;
+    }
+ 
+   
+  }
+
+  @media (max-width:317px){
+    .guidlines{
+    margin:40px;
+    }   
+  } */
+
