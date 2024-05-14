@@ -48,3 +48,10 @@ const jobroles = [
 
 export default jobroles;
 
+export const footer = [
+    {
+        
+
+    }
+]
+

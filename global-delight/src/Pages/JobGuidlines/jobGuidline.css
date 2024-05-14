@@ -9,7 +9,7 @@
 }
 
 .guidlines-h1-btn {
-    position: absolute;
+    position:absolute ;
     right: 2em;
     padding: 0.5em 2em;
     background-color: #BD1414;
@@ -17,6 +17,8 @@
     border: none;
     border-radius: 0.7em;
 }
+
+
 
 .guidlines-h3 {
     font-weight: bolder;
@@ -47,43 +49,66 @@
     margin-left: 25px;
 }
 
+ @media (min-width: 1600px) {
 
-/* @media  (min-width: 418px)and (max-width:600px) {
+}
+@media (min-width: 1850px) {
+
+}
+ @media (max-width: 1400px) {
+
+}
+@media (max-width: 1300px) {
+
+}
+@media (max-width: 1100px) {
+
+}
+@media (max-width: 970px) {
     .guidlines-h1-btn {
-        position: relative; 
-       
-         display: flex;
-        margin-top:6.5em;
-    
-        background-color: #ca0d0d;
-        color: white;
-        border: none;
-         height: 35px;
-       width: 120px;
-       width: 100px;
-        border-radius: 0.7em;
-        left: 0 ;
-        padding: 10px;
-        margin-bottom: 20px;
+        top: 1em;
+        right: 0.5em;
     }
-    .guidlines-h1{
-         margin-bottom: 10px;
-        margin-bottom:0;
-        font-size: 2em;
+
+}
+@media (max-width: 767px) {
+    .guidlines {
+        margin: 2em 4em;
         
     }
-    .guidlines-p {
-        color: #AD2B21;
-        font-weight: normal;
-        margin-top:0px;
+    .guidlines-h1 {
+        font-size: 2em;
+        color: #AD2B21;  
+        position: relative;
     }
- 
-   
-  }
 
-  @media (max-width:317px){
-    .guidlines{
-    margin:40px;
-    }   
-  } */
+    .guidlines-h1-btn{
+        left: 0;
+        right: 20em;
+        bottom: 0;
+       top: 11em;
+       padding-top: 1em;
+       padding-bottom: 2em;
+       padding-left: 0.5em;
+       padding-right: 0.5em;
+       width: 200px;
+    }
+    .jobguidelines-hr{
+     margin-top: 5em;
+    }
+    .guidlines-h3 {
+        font-weight: lighter;
+        font-size: 1em;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+ .guidlines-h1-btn{
+    top: 12em;
+ }
+} 
+
+
 

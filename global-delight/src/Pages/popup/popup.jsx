@@ -138,6 +138,9 @@ function Popup({ POPUP, onClose,position,department,id }) {
               required 
 
             />
+            <div className="popup-message-pdf-div">
+            
+            <p className="popup-message-pdf-div-p">attach your resume(PDF only)</p>
             <input
               className="popup-message-pdf"
               type="file"
@@ -147,9 +150,10 @@ function Popup({ POPUP, onClose,position,department,id }) {
                 console.log(e);
                 handleChange(e);
               }}
-              placeholder="Attach your resume(PDF Only)*"
-              required
+              placeholder="Attach your resume(PDF Only)*"  
             />
+            </div>
+            
             <p className="files-p">
               File size of your documents should not exceed 5MB
             </p>
