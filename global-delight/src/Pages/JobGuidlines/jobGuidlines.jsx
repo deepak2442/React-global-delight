@@ -45,8 +45,6 @@ const JobGuidlines =  () => {
           <button onClick={() => setPopup(true)} className="guidlines-h1-btn" style={{cursor:"pointer"}}>Apply now</button>
         </span>
         <Popup id={id} POPUP ={popup} position={data.length && data[0].position} department={data.length && data[0].department} onClose= {() => setPopup(false)}  />
-        
-       
       </h1>
      <h1> {data.length && data[0].department}</h1>
       <p className="guidlines-p">
@@ -55,7 +53,7 @@ const JobGuidlines =  () => {
         
 
       </p>
-      <hr />
+      <hr className="jobguidelines-hr" />
     
    
 
