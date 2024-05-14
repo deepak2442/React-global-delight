@@ -10,12 +10,13 @@
     background-color: #00000047;
     padding-top: 12em;
     overflow-y: scroll;
+    z-index: 10;
     
     
 }
 
 .popup-body {
-    width: 60%;  
+    width: 70%;  
     background-color: white;
     padding: 2em;
     border-radius: 1em;
@@ -26,13 +27,13 @@
 
 .popup-p {
    font-size: 1.6em;
-    color: black;
+    color: #bcbcbc;
     font-family: sf-ui-medium;
 }
 .popup-p-p{
     font-size: 1.4em;
-    margin-top: 2%;
-    color: black;
+    margin-top: 1%;
+    color: #bcbcbc;
     font-family: sf-ui-medium;
 }
 
@@ -60,37 +61,38 @@
 .popup-in-main {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     width: 100%;
+    padding-left: 3em;
+    padding-right: 3em;
 }
 
 .popup-name-div {
     display: flex;
     width: 100%;
     gap: 1.2em;
-    
-    
+    float: lefts;   
 }
 
 .popup-name-in {
-    width: 50%;   
+    width: 100%;
     padding: 1em;
     margin: 0.5em;
     border-radius: 10px;
-    border: 1px solid #707070 ; 
+    border: 1px solid #707070; 
 
 }
 
 
 .popup-message {
-    width: 98%;
+    width: 99%;
     padding: 1.5em;
+    margin-top: 1em;
     padding-left: 1em;
     margin-bottom: 1em;  
     border-radius: 10px;
     justify-content: start;
-    height: 5em;
+    height: 6em;
     text-align: start;
     padding-top: 0.1em;
     border: 1px solid #707070; 
@@ -108,9 +110,25 @@
     margin-bottom: 1em;  
     border: 2px #707070  dashed;
     text-align: center; 
-    border-radius: 10px;    
+    border-radius: 10px;
+    opacity: 0;    
 }
 
+.popup-message-pdf-div{
+    width: 98%;
+    border:  #bcbcbc dashed;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 5px;
+}
+
+.popup-message-pdf-div-p{
+    position: absolute;
+    color: #bcbcbc;
+}
 .popup-submit {
     margin-top: 1.5em;
     width: 20%;

@@ -62,6 +62,10 @@
     filter: invert(1);
 }
 
+.social-media-logo::after{
+    setpopup 
+}
+
 
 .footer-f {
     display: flex;

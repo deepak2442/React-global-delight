@@ -19,9 +19,10 @@
     border-radius: 2em;
     margin-left: 1em;
     margin-right: 1em;
-    
-    
+    margin-bottom: 1em;
 }
+
+
 
 .job-btn:hover{
     background-color: #BD1414;
